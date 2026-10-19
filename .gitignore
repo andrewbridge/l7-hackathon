@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------- third-party repos and data
+# Not ours to redistribute. See README.md ("Data and files not included") for where each goes.
+/covidpred-master/
+/covidclinicaldata-master/
+/nova-covid-main/
+/COVID Symptom Study/
+/data/
+/research-paper.pdf
+/benchmarks/*
+!/benchmarks/README.md
+
+# ---------------------------------------------------------------- environments and tooling
+.venv/
+venv/
+.devbox/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+catboost_info/
+
+# ---------------------------------------------------------------- OS and editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# ---------------------------------------------------------------- secrets, just in case
+.env
+.env.*

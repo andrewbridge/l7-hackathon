@@ -1,0 +1,22 @@
+# Python 3.14 (see devbox.json). Install with: python -m pip install -r requirements.txt
+# Direct dependencies only; versions are the ones the notebooks and tests were last run with.
+
+# symptompred library
+numpy==2.5.4
+pandas==3.0.6
+scikit-learn==1.9.1
+lightgbm==4.7.0
+shap==0.54.1
+matplotlib==3.11.2
+
+# alternative-modelling.ipynb (other gradient-boosting libraries)
+xgboost==3.4.1
+catboost==1.2.10
+
+# running the notebooks
+ipykernel==7.4.0
+nbconvert==7.17.2
+nbformat==5.11.1
+
+# tests
+pytest==9.1.1
