@@ -17,3 +17,21 @@ It's used in `alternative-modelling.ipynb` as the benchmark to beat. Its feature
 which correspond to symptompred's `male, age_60, cough, fever, sore_throat, shortness_of_breath, headache, contact`.
 On their split (Israel ver. 006, all rows including unknown sex; train 22–31 Mar 2020, test 1–7 Apr 2020)
 it scores auROC 0.902 / auPRC 0.700.
+
+## Other models from the same repository
+
+`presentation-assets.ipynb` can also show the groupmate's other saved models (all trained with the paper's
+hyperparameters, on their split):
+
+| File | Features | Their test auROC / auPRC |
+|---|---|---|
+| `lgbm_replication_model.txt` | the paper's 8 | 0.889 / 0.585 |
+| `lgbm_balanced_features_model.txt` | sex, age ≥ 60, cough, fever, contact (the 3 biased symptoms dropped) | 0.865 / 0.456 |
+| `lgbm_combined_biased_feature_model.txt` | the 5 above + `any_biased_symptom` (1 if any of the 3 biased symptoms) | 0.881 / 0.453 |
+
+```bash
+for f in lgbm_replication_model.txt lgbm_balanced_features_model.txt lgbm_combined_biased_feature_model.txt; do
+  curl -L -o benchmarks/$f \
+    https://raw.githubusercontent.com/warren-davies4/covid-prediction-hackathon/4f136de0cd12de57362e64a5f22894d7834ab5bf/$f
+done
+```

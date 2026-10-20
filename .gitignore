@@ -9,6 +9,9 @@
 /benchmarks/*
 !/benchmarks/README.md
 
+# ---------------------------------------------------------------- cached results (rebuilt by presentation-assets.ipynb)
+/results/
+
 # ---------------------------------------------------------------- environments and tooling
 .venv/
 venv/
